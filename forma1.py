@@ -52,3 +52,11 @@ print(f"A legtöbb futamot nyert versenyző: {adatok[legtobb_gyozelem_indexe], l
 print(f"A legtöbb futamot teljesített versenyző: {adatok[legtobb_futam_indexe]} ")
 print(f"Az átlagos futamszám: {atlag} ")
 
+
+with open("kiírt_adatok/statisztika.txt", "w", encoding="utf-8") as kiírando:
+    print(" rar statisztika.txt fájl kiirasa")
+    print(f"A beolvasott fájlban összesen {len(adatok)} versenyző szerepel.", file=kiírando)
+    print(f"A legtöbb futamot nyert versenyző: {adatok[legtobb_gyozelem_indexe], legtobb_gyozelem}", file=kiírando)
+    print(f"A legtöbb futamot teljesített versenyző: {adatok[legtobb_futam_indexe]}", file=kiírando)
+    print(f"Az átlagos futamszám: {atlag}", file=kiírando)
+
